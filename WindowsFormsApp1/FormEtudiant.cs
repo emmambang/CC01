@@ -21,5 +21,28 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.Title = "Choose a picture";
+            ofd.Filter = "Images files |*.jpg;*.jpeg;*.png;*.gif";
+
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.ImageLocation = ofd.FileName;
+            }
+
+            else
+            {
+                pictureBox4.ImageLocation = null;
+            }
+        }
     }
 }

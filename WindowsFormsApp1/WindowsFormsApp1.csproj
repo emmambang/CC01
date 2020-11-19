@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Copier.cs" />
     <Compile Include="FormEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
