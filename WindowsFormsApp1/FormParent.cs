@@ -24,22 +24,36 @@ namespace WindowsFormsApp1
 
         private void formEtudiantToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new FormEtudiant().Show();
+            panel1.Controls.Clear();
+            FormEtudiant f = new FormEtudiant();
+
+            f.panel1.Visible = true;
+            panel1.Controls.Add(f.panel1);
         }
 
         private void listeEtudiantToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class1.l.ShowDialog();
+            panel1.Controls.Clear();
+
+            Class1.l.panel1.Visible = true;
+            panel1.Controls.Add(Class1.l.panel1);
         }
 
         private void formEcoleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new FormEcole().Show();
+            panel1.Controls.Clear();
+            FormEcole f = new FormEcole();
+
+            f.panel1.Visible = true;
+            panel1.Controls.Add(f.panel1);
         }
 
         private void listeEcoleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class1.l2.ShowDialog();
+            panel1.Controls.Clear();
+
+            Class1.l2.panel1.Visible = true;
+            panel1.Controls.Add(Class1.l2.panel1);
         }
     }
 }

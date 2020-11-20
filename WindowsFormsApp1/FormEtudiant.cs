@@ -33,30 +33,11 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            ofd = new OpenFileDialog();
-
-            ofd.Title = "Choose a picture";
-            ofd.Filter = "Images files |*.jpg;*.jpeg;*.png;*.gif";
-
-            if(ofd.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox4.ImageLocation = ofd.FileName;
-                lblPhoto.Visible = false;
-            }
-
-            else
-            {
-                pictureBox4.ImageLocation = null;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             if (button1.Text == "Save")
             {
-                if(pictureBox4.Image != null)
+                if (pictureBox4.Image != null)
                 {
                     //string[] infos = new string[] { txtNom.Text, txtPrenom.Text, txtIdentifiant.Text, dateTimePicker1.Text, txtEmail.Text, txtContact.Text, ofd.FileName };
                     string[] copie = new string[] { txtNom.Text, txtPrenom.Text, txtIdentifiant.Text, dateTimePicker1.Text, txtEmail.Text, txtContact.Text };
@@ -108,7 +89,7 @@ namespace WindowsFormsApp1
                         ) == DialogResult.Yes
                     )
                 {
-                    if(ofd.FileName != null)
+                    if (ofd.FileName != null)
                     {
                         Class1.Tab1[Class1.temp][0] = txtNom.Text;
                         Class1.Tab1[Class1.temp][1] = txtPrenom.Text;
@@ -146,6 +127,30 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            ofd = new OpenFileDialog();
+
+            ofd.Title = "Choose a picture";
+            ofd.Filter = "Images files |*.jpg;*.jpeg;*.png;*.gif";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox4.ImageLocation = ofd.FileName;
+                lblPhoto.Visible = false;
+            }
+
+            else
+            {
+                pictureBox4.ImageLocation = null;
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
         }
     }
 }

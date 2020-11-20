@@ -28,8 +28,7 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             if (button1.Text == "Save")
             {
@@ -70,7 +69,7 @@ namespace WindowsFormsApp1
 
             else
             {
-                if(ofd.FileName != null)
+                if (ofd.FileName != null)
                 {
                     if
                         (
@@ -119,7 +118,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void pictureBox4_Click_1(object sender, EventArgs e)
         {
             ofd = new OpenFileDialog();
 
@@ -136,6 +135,11 @@ namespace WindowsFormsApp1
             {
                 pictureBox4.ImageLocation = null;
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
         }
     }
 }

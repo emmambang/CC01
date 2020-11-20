@@ -133,8 +133,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Class1.datasource" />
+    <None Include="Properties\DataSources\FormEcole.datasource" />
+    <None Include="Properties\DataSources\FormEtudiant.datasource" />
+    <None Include="Properties\DataSources\FormParent.datasource" />
+    <None Include="Properties\DataSources\ListeEcole.datasource" />
+    <None Include="Properties\DataSources\ListeEtudiant.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
