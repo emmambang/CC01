@@ -49,5 +49,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CC01.BLL\CC01.BLL.csproj">
+      <Project>{48d75865-1e00-4e0e-a17c-8da0de20ff76}</Project>
+      <Name>CC01.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CC01.BO\CC01.BO.csproj">
+      <Project>{d0c51933-fe70-4d41-84b9-77f4b9db19f0}</Project>
+      <Name>CC01.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CC01.DAL\CC01.DAL.csproj">
+      <Project>{72408975-c09b-43d7-ba0f-4412c79c57db}</Project>
+      <Name>CC01.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WindowsFormsApp1\WindowsFormsApp1.csproj">
+      <Project>{9460ebb4-440f-4899-b641-2f43f494d5e1}</Project>
+      <Name>WindowsFormsApp1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

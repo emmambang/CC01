@@ -29,14 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNom = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtPrenom = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIdentifiant = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtContact = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,8 +39,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.txtIdentifiant = new System.Windows.Forms.TextBox();
+            this.txtPrenom = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPhoto = new System.Windows.Forms.Label();
+            this.lblBarre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -58,44 +62,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Nom";
             // 
-            // txtNom
-            // 
-            this.txtNom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNom.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNom.HintForeColor = System.Drawing.Color.Empty;
-            this.txtNom.HintText = "";
-            this.txtNom.isPassword = false;
-            this.txtNom.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtNom.LineIdleColor = System.Drawing.Color.White;
-            this.txtNom.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtNom.LineThickness = 2;
-            this.txtNom.Location = new System.Drawing.Point(377, 43);
-            this.txtNom.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(249, 33);
-            this.txtNom.TabIndex = 3;
-            this.txtNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtPrenom
-            // 
-            this.txtPrenom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPrenom.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtPrenom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPrenom.HintForeColor = System.Drawing.Color.Empty;
-            this.txtPrenom.HintText = "";
-            this.txtPrenom.isPassword = false;
-            this.txtPrenom.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtPrenom.LineIdleColor = System.Drawing.Color.White;
-            this.txtPrenom.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtPrenom.LineThickness = 2;
-            this.txtPrenom.Location = new System.Drawing.Point(377, 103);
-            this.txtPrenom.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(249, 33);
-            this.txtPrenom.TabIndex = 5;
-            this.txtPrenom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -105,25 +71,6 @@
             this.label2.Size = new System.Drawing.Size(78, 22);
             this.label2.TabIndex = 4;
             this.label2.Text = "Prenom";
-            // 
-            // txtIdentifiant
-            // 
-            this.txtIdentifiant.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdentifiant.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtIdentifiant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIdentifiant.HintForeColor = System.Drawing.Color.Empty;
-            this.txtIdentifiant.HintText = "";
-            this.txtIdentifiant.isPassword = false;
-            this.txtIdentifiant.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtIdentifiant.LineIdleColor = System.Drawing.Color.White;
-            this.txtIdentifiant.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtIdentifiant.LineThickness = 2;
-            this.txtIdentifiant.Location = new System.Drawing.Point(377, 169);
-            this.txtIdentifiant.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIdentifiant.Name = "txtIdentifiant";
-            this.txtIdentifiant.Size = new System.Drawing.Size(249, 33);
-            this.txtIdentifiant.TabIndex = 7;
-            this.txtIdentifiant.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label3
             // 
@@ -135,25 +82,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Identifiant";
             // 
-            // txtMail
-            // 
-            this.txtMail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtMail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMail.HintForeColor = System.Drawing.Color.Empty;
-            this.txtMail.HintText = "";
-            this.txtMail.isPassword = false;
-            this.txtMail.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtMail.LineIdleColor = System.Drawing.Color.White;
-            this.txtMail.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtMail.LineThickness = 2;
-            this.txtMail.Location = new System.Drawing.Point(377, 279);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(249, 33);
-            this.txtMail.TabIndex = 9;
-            this.txtMail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -163,25 +91,6 @@
             this.label4.Size = new System.Drawing.Size(66, 22);
             this.label4.TabIndex = 8;
             this.label4.Text = "E-mail";
-            // 
-            // txtContact
-            // 
-            this.txtContact.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContact.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtContact.HintForeColor = System.Drawing.Color.Empty;
-            this.txtContact.HintText = "";
-            this.txtContact.isPassword = false;
-            this.txtContact.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtContact.LineIdleColor = System.Drawing.Color.White;
-            this.txtContact.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtContact.LineThickness = 2;
-            this.txtContact.Location = new System.Drawing.Point(377, 338);
-            this.txtContact.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(249, 33);
-            this.txtContact.TabIndex = 11;
-            this.txtContact.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label5
             // 
@@ -195,7 +104,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(12, 54);
+            this.pictureBox4.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(163, 166);
             this.pictureBox4.TabIndex = 14;
@@ -206,18 +115,19 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(286, 449);
+            this.button1.Location = new System.Drawing.Point(287, 483);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 52);
             this.button1.TabIndex = 15;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(485, 449);
+            this.button2.Location = new System.Drawing.Point(486, 483);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 52);
             this.button2.TabIndex = 16;
@@ -227,7 +137,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(754, 383);
+            this.pictureBox1.Location = new System.Drawing.Point(757, 426);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 63);
             this.pictureBox1.TabIndex = 21;
@@ -251,33 +161,102 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(249, 26);
             this.dateTimePicker1.TabIndex = 23;
             // 
+            // txtNom
+            // 
+            this.txtNom.Location = new System.Drawing.Point(392, 56);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(318, 20);
+            this.txtNom.TabIndex = 24;
+            // 
+            // txtIdentifiant
+            // 
+            this.txtIdentifiant.Location = new System.Drawing.Point(392, 180);
+            this.txtIdentifiant.Name = "txtIdentifiant";
+            this.txtIdentifiant.Size = new System.Drawing.Size(318, 20);
+            this.txtIdentifiant.TabIndex = 25;
+            // 
+            // txtPrenom
+            // 
+            this.txtPrenom.Location = new System.Drawing.Point(392, 114);
+            this.txtPrenom.Name = "txtPrenom";
+            this.txtPrenom.Size = new System.Drawing.Size(318, 20);
+            this.txtPrenom.TabIndex = 26;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(392, 290);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(318, 20);
+            this.txtEmail.TabIndex = 27;
+            // 
+            // txtContact
+            // 
+            this.txtContact.Location = new System.Drawing.Point(392, 349);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(318, 20);
+            this.txtContact.TabIndex = 28;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblPhoto);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Location = new System.Drawing.Point(12, 56);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(163, 167);
+            this.panel1.TabIndex = 29;
+            // 
+            // lblPhoto
+            // 
+            this.lblPhoto.AutoSize = true;
+            this.lblPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoto.Location = new System.Drawing.Point(51, 74);
+            this.lblPhoto.Name = "lblPhoto";
+            this.lblPhoto.Size = new System.Drawing.Size(45, 17);
+            this.lblPhoto.TabIndex = 50;
+            this.lblPhoto.Text = "Photo";
+            // 
+            // lblBarre
+            // 
+            this.lblBarre.AutoSize = true;
+            this.lblBarre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarre.Location = new System.Drawing.Point(754, 393);
+            this.lblBarre.Name = "lblBarre";
+            this.lblBarre.Size = new System.Drawing.Size(79, 17);
+            this.lblBarre.TabIndex = 51;
+            this.lblBarre.Text = "Code barre";
+            this.lblBarre.Visible = false;
+            // 
             // FormEtudiant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(863, 514);
+            this.ClientSize = new System.Drawing.Size(863, 562);
+            this.Controls.Add(this.lblBarre);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtContact);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPrenom);
+            this.Controls.Add(this.txtIdentifiant);
+            this.Controls.Add(this.txtNom);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.txtContact);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtMail);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtIdentifiant);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPrenom);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNom);
             this.Controls.Add(this.label1);
             this.Name = "FormEtudiant";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormEtudiant_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,21 +264,24 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNom;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrenom;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtIdentifiant;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMail;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtContact;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.TextBox txtNom;
+        public System.Windows.Forms.TextBox txtIdentifiant;
+        public System.Windows.Forms.TextBox txtPrenom;
+        public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.TextBox txtContact;
+        public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.Label lblPhoto;
+        public System.Windows.Forms.Label lblBarre;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

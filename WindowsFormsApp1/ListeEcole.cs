@@ -11,13 +11,13 @@ using System.Windows.Forms;
 using Zen.Barcode;
 
 namespace WindowsFormsApp1
-{
-    public partial class ListeEtudiant : Form
+{ 
+    public partial class ListeEcole : Form
     {
-        public int i;
-        public int? a;
+        int i;
+        int? a;
 
-        public ListeEtudiant()
+        public ListeEcole()
         {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
 
                         listView1.Items[i].Remove();
 
-                        Class1.Tab1.RemoveAt(i);
+                        Class1.Tab2.RemoveAt(i);
 
                         i = -1;
                     }
@@ -65,26 +65,31 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             listView1.Items.Clear();
 
             if (txtSearch.Text == "")
             {
-                for (i = 0; i < Class1.Tab1.Count; i++)
+                for (i = 0; i < Class1.Tab2.Count; i++)
                 {
-                    string[] copie = new string[] { Class1.Tab1[i][0], Class1.Tab1[i][1], Class1.Tab1[i][2], Class1.Tab1[i][3], Class1.Tab1[i][4], Class1.Tab1[i][5] };
+                    string[] copie = new string[] { Class1.Tab2[i][0], Class1.Tab2[i][1], Class1.Tab2[i][2], Class1.Tab2[i][3] };
                     listView1.Items.Add(new ListViewItem(copie));
                 }
             }
 
             else if (txtSearch.Text.Length > 0)
             {
-                for (i = 0; i < Class1.Tab1.Count; i++)
+                for (i = 0; i < Class1.Tab2.Count; i++)
                 {
-                    if (Class1.Tab1[i][0].ToLower().Contains(txtSearch.Text.ToLower()) || Class1.Tab1[i][1].ToLower().Contains(txtSearch.Text.ToLower()))
-                    {
-                        string[] copie = new string[] { Class1.Tab1[i][0], Class1.Tab1[i][1], Class1.Tab1[i][2], Class1.Tab1[i][3], Class1.Tab1[i][4], Class1.Tab1[i][5] };
+                    if (Class1.Tab2[i][0].ToLower().Contains(txtSearch.Text.ToLower()) || Class1.Tab2[i][1].ToLower().Contains(txtSearch.Text.ToLower()))
+                    { 
+                        string[] copie = new string[] { Class1.Tab2[i][0], Class1.Tab2[i][1], Class1.Tab2[i][2], Class1.Tab2[i][3] };
                         Thread.Sleep(90);
 
                         listView1.Items.Add(new ListViewItem(copie));
@@ -93,9 +98,9 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ListeEcole_Load(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -107,26 +112,24 @@ namespace WindowsFormsApp1
 
             else
             {
-                FormEtudiant f = new FormEtudiant();
-                f.Show();
-                f.button1.Text = "Edit";
-                f.lblBarre.Visible = true;
+                FormEcole f1 = new FormEcole();
+                f1.Show();
+                f1.button1.Text = "Edit";
+                f1.lblBarre.Visible = true;
 
-                CodeQrBarcodeDraw barcode = BarcodeDrawFactory.CodeQr;
-                f.pictureBox1.Image = barcode.Draw(Class1.Tab1[i][2], 50);
+                CodeQrBarcodeDraw qrcode = BarcodeDrawFactory.CodeQr;
+                f1.pictureBox1.Image = qrcode.Draw(Class1.Tab2[i][0], 50);
 
                 for (i = 0; i < listView1.Items.Count; i++)
                 {
                     if (listView1.Items[i].Selected)
                     {
-                        f.txtNom.Text = Class1.Tab1[i][0];
-                        f.txtPrenom.Text = Class1.Tab1[i][1];
-                        f.txtIdentifiant.Text = Class1.Tab1[i][2];
-                        f.dateTimePicker1.Text = Class1.Tab1[i][3];
-                        f.txtEmail.Text = Class1.Tab1[i][4];
-                        f.txtContact.Text = Class1.Tab1[i][5];
-                        f.pictureBox4.ImageLocation = Class1.Tab1[i][6];
-                        f.lblPhoto.Visible = false;
+                        f1.txtNom.Text = Class1.Tab2[i][0];
+                        f1.dateTimePicker1.Text = Class1.Tab2[i][1];
+                        f1.txtEmail.Text = Class1.Tab2[i][2];
+                        f1.txtContact.Text = Class1.Tab2[i][3];
+                        f1.pictureBox4.ImageLocation = Class1.Tab2[i][4];
+                        f1.lblPhoto.Visible = false;
 
                         Class1.temp = i;
                     }
