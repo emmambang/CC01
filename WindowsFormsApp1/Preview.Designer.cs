@@ -28,26 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // reportViewer2
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(230, 151);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
-            this.reportViewer1.TabIndex = 0;
+            this.reportViewer2.Location = new System.Drawing.Point(166, 15);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(233, 262);
+            this.reportViewer2.TabIndex = 0;
             // 
             // Preview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(564, 289);
+            this.Controls.Add(this.reportViewer2);
             this.Name = "Preview";
-            this.Text = "Preview";
-            this.Load += new System.EventHandler(this.Preview_Load);
+            this.Load += new System.EventHandler(this.Preview_Load_1);
             this.ResumeLayout(false);
 
         }
@@ -55,5 +52,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
     }
 }

@@ -26,5 +26,11 @@ namespace WindowsFormsApp1
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();
         }
+
+        private void Preview_Load_1(object sender, EventArgs e)
+        {
+
+            this.reportViewer2.RefreshReport();
+        }
     }
 }
