@@ -89,7 +89,7 @@ namespace WindowsFormsApp1
                         ) == DialogResult.Yes
                     )
                 {
-                    if (ofd.FileName != null)
+                    if (pictureBox4.Image != null)
                     {
                         Class1.Tab1[Class1.temp][0] = txtNom.Text;
                         Class1.Tab1[Class1.temp][1] = txtPrenom.Text;
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
                         Class1.Tab1[Class1.temp][3] = dateTimePicker1.Text;
                         Class1.Tab1[Class1.temp][4] = txtEmail.Text;
                         Class1.Tab1[Class1.temp][5] = txtContact.Text;
-                        Class1.Tab1[Class1.temp][6] = ofd.FileName;
+                        Class1.Tab1[Class1.temp][6] = pictureBox4.ImageLocation;
 
                         Class1.l.listView1.Items.Clear();
 
@@ -150,7 +150,15 @@ namespace WindowsFormsApp1
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            panel1.Visible = false;
+            if (button1.Text == "Save")
+            {
+                panel1.Visible = false;
+            }
+
+            else
+            {
+                this.Close();
+            }
         }
     }
 }

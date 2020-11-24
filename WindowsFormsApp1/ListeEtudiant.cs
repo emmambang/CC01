@@ -69,9 +69,6 @@ namespace WindowsFormsApp1
                 f.button1.Text = "Edit";
                 f.lblBarre.Visible = true;
 
-                CodeQrBarcodeDraw barcode = BarcodeDrawFactory.CodeQr;
-                f.pictureBox1.Image = barcode.Draw(Class1.Tab1[i][2], 50);
-
                 for (i = 0; i < listView1.Items.Count; i++)
                 {
                     if (listView1.Items[i].Selected)
@@ -83,6 +80,8 @@ namespace WindowsFormsApp1
                         f.txtEmail.Text = Class1.Tab1[i][4];
                         f.txtContact.Text = Class1.Tab1[i][5];
                         f.pictureBox4.ImageLocation = Class1.Tab1[i][6];
+                        CodeQrBarcodeDraw barcode = BarcodeDrawFactory.CodeQr;
+                        f.pictureBox1.Image = barcode.Draw(Class1.Tab1[i][2], 50);
                         f.lblPhoto.Visible = false;
 
                         Class1.temp = i;
