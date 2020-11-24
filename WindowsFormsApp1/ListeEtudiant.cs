@@ -137,5 +137,10 @@ namespace WindowsFormsApp1
         {
             panel1.Visible = false;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new Preview().Show();
+        }
     }
 }
