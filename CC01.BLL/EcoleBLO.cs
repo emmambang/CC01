@@ -25,31 +25,31 @@ namespace CC01.DAL
         public void CreateEcole(Ecole oldEcole, Ecole newEcole)
         {
             string filename = null;
-            if (!string.IsNullOrEmpty(newEcole.Logo))
+            if (!string.IsNullOrEmpty(newEcole.Logo.ToString()))
             {
-                string ext = Path.GetExtension(newEcole.Logo);
+                string ext = Path.GetExtension(newEcole.Logo.ToString());
                 filename = Guid.NewGuid().ToString() + ext;
-                FileInfo fileSource = new FileInfo(newEcole.Logo);
+                FileInfo fileSource = new FileInfo(newEcole.Logo.ToString());
                 string filePath = Path.Combine(dbFolder, "logo", filename);
                 FileInfo fileDest = new FileInfo(filePath);
                 if (!fileDest.Directory.Exists)
                     fileDest.Directory.Create();
                 fileSource.CopyTo(fileDest.FullName);
             }
-            newEcole.Logo = filename;
+            newEcole.Logo =byte.Parse(filename);
             //ecoleRepo.Add(newEcole);
 
-            if (!string.IsNullOrEmpty(oldEcole.Logo))
-                File.Delete(oldEcole.Logo);
+            if (!string.IsNullOrEmpty(oldEcole.Logo.ToString()))
+                File.Delete(oldEcole.Logo.ToString());
         }
 
         public Ecole GetEcole()
         {
-            //Ecole ecole = ecoleRepo.Get();
-            //if (ecole != null)
-            //    if (!string.IsNullOrEmpty(ecole.Logo))
-            //        ecole.Logo = Path.Combine(dbFolder, "logo",ecole.Logo);
-            //return ecole;
+            Ecole ecole = ecoleRepo.Get();
+            if (ecole != null)
+                if (!string.IsNullOrEmpty(ecole.Logo.ToString()))
+                    ecole.Logo = Byte.Parse(Path.Combine(dbFolder, "logo", ecole.Logo.ToString()));
+            return ecole;
         }
     }
 }

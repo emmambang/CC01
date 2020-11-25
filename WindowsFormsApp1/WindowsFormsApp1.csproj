@@ -195,10 +195,6 @@
       <Project>{d0c51933-fe70-4d41-84b9-77f4b9db19f0}</Project>
       <Name>CC01.BO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CC01.DAL\CC01.DAL.csproj">
-      <Project>{72408975-c09b-43d7-ba0f-4412c79c57db}</Project>
-      <Name>CC01.DAL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

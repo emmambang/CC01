@@ -1,6 +1,5 @@
 ﻿using System;
 using CC01.BO;
-using CC01.DAL;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +15,7 @@ namespace WindowsFormsApp1
         public string Email { get; set; }
         public string Contact { get; set; }
         public DateTime Birthday { get; set; }
+        public byte Photo { get; set; }
 
         //public Print(string nom, string prenom, string identifiant, string email, string contact, DateTime birthday)
         //{

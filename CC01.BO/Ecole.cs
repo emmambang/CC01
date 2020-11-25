@@ -15,6 +15,8 @@ namespace CC01.BO
         public string Contact { get; set; }
         public DateTime Creation { get; set; }
 
+        public byte Logo;
+
         //public Ecole(string nom, string email, string contact, DateTime creation)
         //{
         //    Nom = nom;

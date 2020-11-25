@@ -1,7 +1,6 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
 using CC01.BO;
-using CC01.DAL;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -144,9 +143,17 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Preview p = new Preview();
+            if (listView1.SelectedItems.Count != 1)
+            {
+                MessageBox.Show("On ne peut modifier qu'un seul élément à la fois", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-            p.Show();
+            else
+            {
+                Preview p = new Preview();
+
+                p.Show();
+            }
         }
     }
 }
