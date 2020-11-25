@@ -37,7 +37,7 @@ namespace CC01.DAL
                 fileSource.CopyTo(fileDest.FullName);
             }
             newEcole.Logo = filename;
-            ecoleRepo.Add(newEcole);
+            //ecoleRepo.Add(newEcole);
 
             if (!string.IsNullOrEmpty(oldEcole.Logo))
                 File.Delete(oldEcole.Logo);
@@ -45,11 +45,11 @@ namespace CC01.DAL
 
         public Ecole GetEcole()
         {
-            Ecole ecole = ecoleRepo.Get();
-            if (ecole != null)
-                if (!string.IsNullOrEmpty(ecole.Logo))
-                    ecole.Logo = Path.Combine(dbFolder, "logo",ecole.Logo);
-            return ecole;
+            //Ecole ecole = ecoleRepo.Get();
+            //if (ecole != null)
+            //    if (!string.IsNullOrEmpty(ecole.Logo))
+            //        ecole.Logo = Path.Combine(dbFolder, "logo",ecole.Logo);
+            //return ecole;
         }
     }
 }

@@ -10,21 +10,21 @@ namespace CC01.BO
     public class Ecole
     {
 
-        public string Identifiant { get; set; }
-
-        public string Logo { get; set; }
-
         public string Nom { get; set; }
+        public string Prenom { get; set; }
+        public string Identifiant { get; set; }
+        public string Email { get; set; }
+        public string Contact { get; set; }
+        public DateTime Birthday { get; set; }
 
-        public Ecole()
+        public Ecole(string nom, string prenom, string identifiant, string email, string contact, DateTime birthday)
         {
-
-        }
-        public Ecole(string identifiant, string logo, string nom)
-        {
-            Identifiant = identifiant;
-            Logo = logo;
             Nom = nom;
+            Prenom = prenom;
+            Identifiant = identifiant;
+            Email = email;
+            Contact = contact;
+            Birthday = birthday;
         }
 
         public override bool Equals(object obj)

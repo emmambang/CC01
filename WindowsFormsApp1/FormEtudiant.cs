@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
                 }
 
 
-                using (StreamWriter sw = new StreamWriter("Data_Etudiant.json"))
+                using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Etudiant.json"))
                 {
                     using (JsonWriter jw = new JsonTextWriter(sw))
                     {
@@ -106,7 +106,7 @@ namespace WindowsFormsApp1
                             Class1.l.listView1.Items.Add(new ListViewItem(Class1.Tab1[i]));
                         }
 
-                        using (StreamWriter sw = new StreamWriter("Data_Etudiant.json"))
+                        using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Etudiant.json"))
                         {
                             using (JsonWriter jw = new JsonTextWriter(sw))
                             {

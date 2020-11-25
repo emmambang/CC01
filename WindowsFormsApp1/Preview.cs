@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void Preview_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.LocalReport.ReportPath = @"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\bin\Debug\Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = @"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\Report1.rdlc";
             ReportDataSource rds = new ReportDataSource("DataSet1", GetListe());
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();

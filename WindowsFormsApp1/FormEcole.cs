@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
 
                     MessageBox.Show("Enregistrement réussi");
 
-                    using (StreamWriter sw = new StreamWriter("Data_Ecole.json"))
+                    using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Ecole.json"))
                     {
                         using (JsonWriter jw = new JsonTextWriter(sw))
                         {
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
                             Class1.l.listView1.Items.Add(new ListViewItem(Class1.Tab2[i]));
                         }
 
-                        using (StreamWriter sw = new StreamWriter("Data_Ecole.json"))
+                        using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Ecole.json"))
                         {
                             using (JsonWriter jw = new JsonTextWriter(sw))
                             {

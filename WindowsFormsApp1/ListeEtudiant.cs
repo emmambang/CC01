@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 1)
+            if (listView1.SelectedItems.Count != 1)
             {
                 MessageBox.Show("On ne peut modifier qu'un seul élément à la fois", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -66,6 +66,7 @@ namespace WindowsFormsApp1
             else
             {
                 FormEtudiant f = new FormEtudiant();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
                 f.Show();
                 f.button1.Text = "Edit";
                 f.lblBarre.Visible = true;

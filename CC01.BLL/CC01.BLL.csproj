@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CC01.BO\CC01.BO.csproj" />
+    <ProjectReference Include="..\CC01.DAL\CC01.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
