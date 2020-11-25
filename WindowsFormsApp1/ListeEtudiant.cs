@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -140,7 +141,9 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //new Preview().Show();
+            Preview p = new Preview();
+
+            p.Show();
         }
     }
 }
