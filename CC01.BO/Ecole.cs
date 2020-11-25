@@ -11,31 +11,27 @@ namespace CC01.BO
     {
 
         public string Nom { get; set; }
-        public string Prenom { get; set; }
-        public string Identifiant { get; set; }
         public string Email { get; set; }
         public string Contact { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime Creation { get; set; }
 
-        public Ecole(string nom, string prenom, string identifiant, string email, string contact, DateTime birthday)
-        {
-            Nom = nom;
-            Prenom = prenom;
-            Identifiant = identifiant;
-            Email = email;
-            Contact = contact;
-            Birthday = birthday;
-        }
+        //public Ecole(string nom, string email, string contact, DateTime creation)
+        //{
+        //    Nom = nom;
+        //    Email = email;
+        //    Contact = contact;
+        //    Creation = creation;
+        //}
 
         public override bool Equals(object obj)
         {
             return obj is Ecole ecole &&
-                   Identifiant == ecole.Identifiant;
+                   Nom == ecole.Nom;
         }
 
         public override int GetHashCode()
         {
-            return 574969646 + EqualityComparer<string>.Default.GetHashCode(Identifiant);
+            return 574969646 + EqualityComparer<string>.Default.GetHashCode(Nom);
         }
     }
 }
