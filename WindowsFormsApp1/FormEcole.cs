@@ -35,31 +35,55 @@ namespace WindowsFormsApp1
             {
                 if (pictureBox4.Image != null)
                 {
-                    string[] infos = new string[] { txtNom.Text, dateTimePicker1.Text, txtEmail.Text, txtContact.Text, ofd.FileName };
-                    string[] copie = new string[] { txtNom.Text, dateTimePicker1.Text, txtEmail.Text, txtContact.Text };
-
-                    Class1.l2.listView1.Items.Add(new ListViewItem(copie));
-                    Class1.Tab2.Add(infos);
-                    Class1.ch.comboBox1.Items.Add(txtNom.Text);
-
-                    txtNom.Clear();
-                    txtEmail.Clear();
-                    txtContact.Clear();
-                    pictureBox4.ImageLocation = null;
-                    lblPhoto.Visible = true;
-
-                    MessageBox.Show("Enregistrement réussi");
-
-                    using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Ecole.json"))
+                    i = 0;
+                    while (Class1.Tab2.Count != i)
                     {
-                        using (JsonWriter jw = new JsonTextWriter(sw))
+                        if (Class1.Tab2[i][0] == txtNom.Text)
+                            break;
+                        i++;
+                    }
+
+                    if (i == Class1.Tab2.Count)
+                    {
+                        string[] infos = new string[] { txtNom.Text, dateTimePicker1.Text, txtEmail.Text, txtContact.Text, ofd.FileName };
+                        string[] copie = new string[] { txtNom.Text, dateTimePicker1.Text, txtEmail.Text, txtContact.Text };
+
+                        Class1.l2.listView1.Items.Add(new ListViewItem(copie));
+                        Class1.Tab2.Add(infos);
+                        Class1.ch.comboBox1.Items.Add(txtNom.Text);
+
+                        txtNom.Clear();
+                        txtEmail.Clear();
+                        txtContact.Clear();
+                        pictureBox4.ImageLocation = null;
+                        lblPhoto.Visible = true;
+
+                        MessageBox.Show("Enregistrement réussi");
+
+                        using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Ecole.json"))
                         {
-                            jw.Formatting = Formatting.Indented;
+                            using (JsonWriter jw = new JsonTextWriter(sw))
+                            {
+                                jw.Formatting = Formatting.Indented;
 
-                            JsonSerializer js = new JsonSerializer();
+                                JsonSerializer js = new JsonSerializer();
 
-                            js.Serialize(jw, JsonConvert.DeserializeObject(JsonConvert.SerializeObject(Class1.Tab2)));
+                                js.Serialize(jw, JsonConvert.DeserializeObject(JsonConvert.SerializeObject(Class1.Tab2)));
+                            }
                         }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show
+                            (
+                                "Cet école existe déjà !!!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error
+                            );
+
+                        txtNom.Focus();
                     }
                 }
 
@@ -84,34 +108,58 @@ namespace WindowsFormsApp1
                             ) == DialogResult.Yes
                         )
                     {
-                        Class1.Tab2[Class1.temp][0] = txtNom.Text;
-                        Class1.Tab2[Class1.temp][1] = dateTimePicker1.Text;
-                        Class1.Tab2[Class1.temp][2] = txtEmail.Text;
-                        Class1.Tab2[Class1.temp][3] = txtContact.Text;
-                        Class1.Tab2[Class1.temp][4] = pictureBox4.ImageLocation;
-
-                        Class1.ch.comboBox1.Items[i] = txtNom.Text;
-
-                        Class1.l.listView1.Items.Clear();
-
-                        for (i = 0; i < Class1.Tab2.Count; i++)
+                        i = 0;
+                        while (Class1.Tab2.Count != i)
                         {
-                            Class1.l.listView1.Items.Add(new ListViewItem(Class1.Tab2[i]));
+                            if (Class1.Tab2[i][0] == txtNom.Text)
+                                break;
+                            i++;
                         }
 
-                        using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Ecole.json"))
+                        if (i == Class1.Tab2.Count)
                         {
-                            using (JsonWriter jw = new JsonTextWriter(sw))
+                            Class1.Tab2[Class1.temp][0] = txtNom.Text;
+                            Class1.Tab2[Class1.temp][1] = dateTimePicker1.Text;
+                            Class1.Tab2[Class1.temp][2] = txtEmail.Text;
+                            Class1.Tab2[Class1.temp][3] = txtContact.Text;
+                            Class1.Tab2[Class1.temp][4] = pictureBox4.ImageLocation;
+
+                            Class1.ch.comboBox1.Items[i] = txtNom.Text;
+
+                            Class1.l.listView1.Items.Clear();
+
+                            for (i = 0; i < Class1.Tab2.Count; i++)
                             {
-                                jw.Formatting = Formatting.Indented;
-
-                                JsonSerializer js = new JsonSerializer();
-
-                                js.Serialize(jw, JsonConvert.DeserializeObject(JsonConvert.SerializeObject(Class1.Tab1)));
+                                Class1.l.listView1.Items.Add(new ListViewItem(Class1.Tab2[i]));
                             }
+
+                            using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Ecole.json"))
+                            {
+                                using (JsonWriter jw = new JsonTextWriter(sw))
+                                {
+                                    jw.Formatting = Formatting.Indented;
+
+                                    JsonSerializer js = new JsonSerializer();
+
+                                    js.Serialize(jw, JsonConvert.DeserializeObject(JsonConvert.SerializeObject(Class1.Tab1)));
+                                }
+                            }
+
+                            this.Close();
                         }
 
-                        this.Close();
+                        else
+                        {
+                            MessageBox.Show
+                            (
+                                "Cet école existe déjà !!!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error
+                            );
+
+                            txtNom.Focus();
+                        }
                     }
 
                     else

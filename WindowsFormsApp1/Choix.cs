@@ -21,10 +21,17 @@ namespace WindowsFormsApp1
         {
             if (comboBox1.Text != "")
             {
+                int i;
+
+                for (i = 0; i < Class1.Tab2.Count; i++)
+                {
+                    if (Class1.Tab2[i][0] == comboBox1.Text)
+                    {
+                        Class1.temp2 = i;
+                    }
+                }
                 Preview p = new Preview();
                 p.Show();
-
-                Class1.temp2 = comboBox1.SelectedIndex;
 
                 this.Close();
             }
@@ -39,6 +46,11 @@ namespace WindowsFormsApp1
                         MessageBoxIcon.Error
                     );
             }
+        }
+
+        private void Choix_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

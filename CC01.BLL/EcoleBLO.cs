@@ -36,7 +36,7 @@ namespace CC01.DAL
                     fileDest.Directory.Create();
                 fileSource.CopyTo(fileDest.FullName);
             }
-            newEcole.Logo =byte.Parse(filename);
+            newEcole.Logo =new byte[] { byte.Parse(filename) };
             //ecoleRepo.Add(newEcole);
 
             if (!string.IsNullOrEmpty(oldEcole.Logo.ToString()))
@@ -48,7 +48,7 @@ namespace CC01.DAL
             Ecole ecole = ecoleRepo.Get();
             if (ecole != null)
                 if (!string.IsNullOrEmpty(ecole.Logo.ToString()))
-                    ecole.Logo = Byte.Parse(Path.Combine(dbFolder, "logo", ecole.Logo.ToString()));
+                    ecole.Logo = new byte[] { Byte.Parse(Path.Combine(dbFolder, "logo", ecole.Logo.ToString())) };
             return ecole;
         }
     }

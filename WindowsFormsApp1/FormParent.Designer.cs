@@ -129,6 +129,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormParent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormParent";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

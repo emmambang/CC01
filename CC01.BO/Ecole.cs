@@ -15,15 +15,16 @@ namespace CC01.BO
         public string Contact { get; set; }
         public DateTime Creation { get; set; }
 
-        public byte Logo;
+        public byte[] Logo;
 
-        //public Ecole(string nom, string email, string contact, DateTime creation)
-        //{
-        //    Nom = nom;
-        //    Email = email;
-        //    Contact = contact;
-        //    Creation = creation;
-        //}
+        public Ecole(string nom, string email, string contact, DateTime creation, byte[] logo)
+        {
+            Nom = nom;
+            Email = email;
+            Contact = contact;
+            Creation = creation;
+            Logo = logo;
+        }
 
         public override bool Equals(object obj)
         {

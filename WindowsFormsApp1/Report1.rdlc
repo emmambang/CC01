@@ -20,7 +20,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox87</rd:DefaultName>
-        <Top>3.46287cm</Top>
+        <Top>3.14537cm</Top>
         <Left>0.3175cm</Left>
         <Height>0.6cm</Height>
         <Width>3.4525cm</Width>
@@ -52,7 +52,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox87</rd:DefaultName>
-        <Top>4.93875cm</Top>
+        <Top>4.62125cm</Top>
         <Left>0.3175cm</Left>
         <Height>0.6cm</Height>
         <Width>4.19334cm</Width>
@@ -126,7 +126,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>3.30412cm</Top>
+        <Top>2.98662cm</Top>
         <Left>4.05946cm</Left>
         <Height>0.75875cm</Height>
         <Width>11.35631cm</Width>
@@ -196,7 +196,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>4.78cm</Top>
+        <Top>4.4625cm</Top>
         <Left>4.95181cm</Left>
         <Height>0.75875cm</Height>
         <Width>10.46396cm</Width>
@@ -212,7 +212,7 @@
         <Value>=First(Fields!Photo.Value, "DataSet1")</Value>
         <MIMEType>image/jpeg</MIMEType>
         <Sizing>FitProportional</Sizing>
-        <Top>6.4262cm</Top>
+        <Top>6.1087cm</Top>
         <Left>0.3175cm</Left>
         <Height>3.6498cm</Height>
         <Width>2.73813cm</Width>
@@ -241,7 +241,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox87</rd:DefaultName>
-        <Top>6.58495cm</Top>
+        <Top>6.26745cm</Top>
         <Left>3.33785cm</Left>
         <Height>0.6cm</Height>
         <Width>3.61126cm</Width>
@@ -315,7 +315,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>6.4262cm</Top>
+        <Top>6.1087cm</Top>
         <Left>7.39008cm</Left>
         <Height>0.75875cm</Height>
         <Width>8.02569cm</Width>
@@ -344,7 +344,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox87</rd:DefaultName>
-        <Top>8.06083cm</Top>
+        <Top>7.74333cm</Top>
         <Left>3.33785cm</Left>
         <Height>0.6cm</Height>
         <Width>2.42063cm</Width>
@@ -418,7 +418,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>7.90208cm</Top>
+        <Top>7.58458cm</Top>
         <Left>5.93487cm</Left>
         <Height>0.75875cm</Height>
         <Width>9.4809cm</Width>
@@ -447,7 +447,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox87</rd:DefaultName>
-        <Top>9.476cm</Top>
+        <Top>9.1585cm</Top>
         <Left>3.33786cm</Left>
         <Height>0.6cm</Height>
         <Width>2.42063cm</Width>
@@ -521,7 +521,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>9.31725cm</Top>
+        <Top>8.99975cm</Top>
         <Left>5.93488cm</Left>
         <Height>0.75875cm</Height>
         <Width>9.4809cm</Width>
@@ -550,7 +550,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox87</rd:DefaultName>
-        <Top>10.73313cm</Top>
+        <Top>10.41563cm</Top>
         <Left>0.31751cm</Left>
         <Height>0.6cm</Height>
         <Width>3.45249cm</Width>
@@ -624,7 +624,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>10.57438cm</Top>
+        <Top>10.25688cm</Top>
         <Left>4.31682cm</Left>
         <Height>0.75875cm</Height>
         <Width>11.09896cm</Width>
@@ -653,7 +653,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox99</rd:DefaultName>
-        <Top>11.8237cm</Top>
+        <Top>11.5062cm</Top>
         <Left>12.91578cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -673,7 +673,7 @@
         <Value>=First(Fields!CodeQr.Value, "DataSet1")</Value>
         <MIMEType>image/jpeg</MIMEType>
         <Sizing>FitProportional</Sizing>
-        <Top>12.90849cm</Top>
+        <Top>12.59099cm</Top>
         <Left>12.91578cm</Left>
         <Height>2.5cm</Height>
         <Width>2.5cm</Width>
@@ -725,7 +725,7 @@
               <TextRun>
                 <Value>=First(Fields!NomEcole.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>16pt</FontSize>
+                  <FontSize>24pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -753,10 +753,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>6.11013in</Height>
+    <Height>5.98513in</Height>
     <Style />
   </Body>
-  <Width>6.09004in</Width>
+  <Width>6.10045in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

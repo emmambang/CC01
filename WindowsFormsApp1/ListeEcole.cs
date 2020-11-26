@@ -10,6 +10,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Zen.Barcode;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace WindowsFormsApp1
 { 
@@ -65,7 +67,7 @@ namespace WindowsFormsApp1
         {
             if (listView1.SelectedItems.Count != 1)
             {
-                MessageBox.Show("On ne peut modifier qu'un seul élément à la fois", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sélectionner une école s'il-vous-plait", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
@@ -120,6 +122,17 @@ namespace WindowsFormsApp1
                         Class1.ch.comboBox1.Items.RemoveAt(i);
 
                         i = -1;
+                    }
+                }
+
+                using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Ecole.json"))
+                {
+                    using (JsonWriter jw = new JsonTextWriter(sw))
+                    {
+                        JsonSerializer js = new JsonSerializer();
+
+                        jw.Formatting = Formatting.Indented;
+                        js.Serialize(jw, JsonConvert.DeserializeObject(JsonConvert.SerializeObject(Class1.Tab1)));
                     }
                 }
 
