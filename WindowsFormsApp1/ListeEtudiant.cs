@@ -84,8 +84,9 @@ namespace WindowsFormsApp1
                         f.txtContact.Text = Class1.Tab1[i][5];
                         f.pictureBox4.ImageLocation = Class1.Tab1[i][6];
                         CodeQrBarcodeDraw barcode = BarcodeDrawFactory.CodeQr;
-                        f.pictureBox1.Image = barcode.Draw(Class1.Tab1[i][2], 50);
+                        f.pictureBox1.Image = barcode.Draw(Class1.Tab1[i][2], 30);
                         f.lblPhoto.Visible = false;
+                        
 
                         Class1.temp = i;
                     }
@@ -115,6 +116,7 @@ namespace WindowsFormsApp1
                         listView1.Items[i].Remove();
 
                         Class1.Tab1.RemoveAt(i);
+                        Class1.bte.RemoveAt(i);
 
                         i = -1;
                     }
@@ -150,9 +152,7 @@ namespace WindowsFormsApp1
 
             else
             {
-                Preview p = new Preview();
-
-                p.Show();
+                Class1.ch.ShowDialog();
             }
         }
     }

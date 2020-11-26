@@ -117,6 +117,7 @@ namespace WindowsFormsApp1
                         listView1.Items[i].Remove();
 
                         Class1.Tab2.RemoveAt(i);
+                        Class1.ch.comboBox1.Items.RemoveAt(i);
 
                         i = -1;
                     }

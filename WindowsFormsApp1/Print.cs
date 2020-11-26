@@ -10,12 +10,15 @@ namespace WindowsFormsApp1
     public class Print
     {
         public string Nom { get; set; }
+        public string NomEcole { get; set; }
         public string Prenom { get; set; }
         public string Identifiant { get; set; }
         public string Email { get; set; }
         public string Contact { get; set; }
-        public DateTime Birthday { get; set; }
-        public byte Photo { get; set; }
+        public string Birthday { get; set; }
+        public byte[] Photo { get; set; }
+        public byte[] CodeQr { get; set; }
+        public byte[] PhotoEcole { get; set; }
 
         //public Print(string nom, string prenom, string identifiant, string email, string contact, DateTime birthday)
         //{

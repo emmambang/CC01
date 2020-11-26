@@ -1,6 +1,7 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
 using CC01.BO;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,18 +36,25 @@ namespace WindowsFormsApp1
 
             for(i = 0; i < Class1.l.listView1.Items.Count; i++)
             {
-                prints.Add
-                    (
-                        new Print
-                        {
-                            Nom = Class1.Tab1[i][0],
-                            Prenom = Class1.Tab1[i][1],
-                            Identifiant = Class1.Tab1[i][2],
-                            Birthday = DateTime.Parse(Class1.Tab1[i][3]),
-                            Email = Class1.Tab1[i][4],
-                            Contact = Class1.Tab1[i][5]
-                        }
-                    );
+                if (Class1.l.listView1.Items[i].Selected)
+                {
+                    prints.Add
+                        (
+                            new Print
+                            {
+                                Nom = Class1.Tab1[i][0],
+                                Prenom = Class1.Tab1[i][1],
+                                Identifiant = Class1.Tab1[i][2],
+                                Birthday = Class1.Tab1[i][3],
+                                Email = Class1.Tab1[i][4],
+                                Contact = Class1.Tab1[i][5],
+                                Photo = File.ReadAllBytes(Class1.Tab1[i][6]),
+                                CodeQr = Class1.bte[i],
+                                NomEcole = Class1.Tab2[Class1.temp2][0],
+                                PhotoEcole = File.ReadAllBytes(Class1.Tab2[Class1.temp2][4])
+                            }
+                        );
+                }
             }
 
             return prints;

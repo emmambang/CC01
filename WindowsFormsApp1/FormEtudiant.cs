@@ -47,6 +47,9 @@ namespace WindowsFormsApp1
                     Class1.l.listView1.Items.Add(new ListViewItem(copie));
                     Class1.Tab1.Add(copies);
 
+                    CodeQrBarcodeDraw barcode = BarcodeDrawFactory.CodeQr;
+                    Class1.bte.Add((byte[])new ImageConverter().ConvertTo(barcode.Draw(Class1.Tab1[Class1.Tab1.Count - 1][2], 30), typeof(byte[])));
+
                     txtNom.Clear();
                     txtPrenom.Clear();
                     txtIdentifiant.Clear();
@@ -56,24 +59,23 @@ namespace WindowsFormsApp1
                     lblPhoto.Visible = true;
 
                     MessageBox.Show("Enregistrement réussi");
+
+                    using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Etudiant.json"))
+                    {
+                        using (JsonWriter jw = new JsonTextWriter(sw))
+                        {
+                            jw.Formatting = Formatting.Indented;
+
+                            JsonSerializer js = new JsonSerializer();
+
+                            js.Serialize(jw, JsonConvert.DeserializeObject(JsonConvert.SerializeObject(Class1.Tab1)));
+                        }
+                    }
                 }
 
                 else
                 {
                     MessageBox.Show("Vous n'avez pas de photo");
-                }
-
-
-                using (StreamWriter sw = new StreamWriter(@"C:\Users\dhout\Desktop\CC01\WindowsFormsApp1\DATA\Data_Etudiant.json"))
-                {
-                    using (JsonWriter jw = new JsonTextWriter(sw))
-                    {
-                        jw.Formatting = Formatting.Indented;
-
-                        JsonSerializer js = new JsonSerializer();
-
-                        js.Serialize(jw, JsonConvert.DeserializeObject(JsonConvert.SerializeObject(Class1.Tab1)));
-                    }
                 }
             }
 
@@ -99,6 +101,9 @@ namespace WindowsFormsApp1
                         Class1.Tab1[Class1.temp][4] = txtEmail.Text;
                         Class1.Tab1[Class1.temp][5] = txtContact.Text;
                         Class1.Tab1[Class1.temp][6] = pictureBox4.ImageLocation;
+
+                        CodeQrBarcodeDraw barcode = BarcodeDrawFactory.CodeQr;
+                        Class1.bte[Class1.temp]= (byte[])new ImageConverter().ConvertTo(barcode.Draw(Class1.Tab1[Class1.temp][2], 30), typeof(byte[]));
 
                         Class1.l.listView1.Items.Clear();
 

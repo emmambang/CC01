@@ -40,6 +40,7 @@ namespace WindowsFormsApp1
 
                     Class1.l2.listView1.Items.Add(new ListViewItem(copie));
                     Class1.Tab2.Add(infos);
+                    Class1.ch.comboBox1.Items.Add(txtNom.Text);
 
                     txtNom.Clear();
                     txtEmail.Clear();
@@ -88,6 +89,8 @@ namespace WindowsFormsApp1
                         Class1.Tab2[Class1.temp][2] = txtEmail.Text;
                         Class1.Tab2[Class1.temp][3] = txtContact.Text;
                         Class1.Tab2[Class1.temp][4] = pictureBox4.ImageLocation;
+
+                        Class1.ch.comboBox1.Items[i] = txtNom.Text;
 
                         Class1.l.listView1.Items.Clear();
 

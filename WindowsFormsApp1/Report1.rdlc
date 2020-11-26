@@ -2,30 +2,28 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Textbox Name="Textbox19">
+      <Textbox Name="Textbox87">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>CARTE D'ETUDIANT</Value>
+                <Value>Nom / Last name :</Value>
                 <Style>
-                  <FontSize>20pt</FontSize>
+                  <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox19</rd:DefaultName>
-        <Top>0.26458cm</Top>
-        <Left>10.11621cm</Left>
-        <Height>0.89104cm</Height>
-        <Width>7.51889cm</Width>
+        <rd:DefaultName>Textbox87</rd:DefaultName>
+        <Top>3.46287cm</Top>
+        <Left>0.3175cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.4525cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -36,30 +34,28 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox69">
+      <Textbox Name="Textbox88">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Nom</Value>
+                <Value>Prenom / First Name :</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox69</rd:DefaultName>
-        <Top>2.6162cm</Top>
-        <Left>8.62224cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>3.53188cm</Width>
+        <rd:DefaultName>Textbox87</rd:DefaultName>
+        <Top>4.93875cm</Top>
+        <Left>0.3175cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.19334cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -75,7 +71,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>11.35631cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -92,9 +88,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Nom.Value</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -106,6 +100,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -131,10 +126,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.6162cm</Top>
-        <Left>14.49599cm</Left>
+        <Top>3.30412cm</Top>
+        <Left>4.05946cm</Left>
         <Height>0.75875cm</Height>
-        <Width>2.5cm</Width>
+        <Width>11.35631cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -142,46 +137,11 @@
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox70">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Prenom</Value>
-                <Style>
-                  <FontSize>18pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox69</rd:DefaultName>
-        <Top>4.31712cm</Top>
-        <Left>8.62224cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>3.53187cm</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Tablix Name="Tablix17">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>10.46396cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -198,9 +158,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Prenom.Value</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -212,6 +170,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -237,41 +196,55 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>4.31712cm</Top>
-        <Left>14.49599cm</Left>
+        <Top>4.78cm</Top>
+        <Left>4.95181cm</Left>
         <Height>0.75875cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>4</ZIndex>
+        <Width>10.46396cm</Width>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox71">
+      <Image Name="Image7">
+        <Source>Database</Source>
+        <Value>=First(Fields!Photo.Value, "DataSet1")</Value>
+        <MIMEType>image/jpeg</MIMEType>
+        <Sizing>FitProportional</Sizing>
+        <Top>6.4262cm</Top>
+        <Left>0.3175cm</Left>
+        <Height>3.6498cm</Height>
+        <Width>2.73813cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Textbox Name="Textbox89">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Identifiant</Value>
+                <Value>Née le / Born on :</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox69</rd:DefaultName>
-        <Top>5.77219cm</Top>
-        <Left>8.62224cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>3.53187cm</Width>
+        <rd:DefaultName>Textbox87</rd:DefaultName>
+        <Top>6.58495cm</Top>
+        <Left>3.33785cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.61126cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -287,7 +260,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>8.02569cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -303,10 +276,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Nom.Value</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                              </Style>
+                              <Value>=Fields!Birthday.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -318,6 +289,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -343,10 +315,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>5.77219cm</Top>
-        <Left>14.49599cm</Left>
+        <Top>6.4262cm</Top>
+        <Left>7.39008cm</Left>
         <Height>0.75875cm</Height>
-        <Width>2.5cm</Width>
+        <Width>8.02569cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -354,30 +326,28 @@
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox72">
+      <Textbox Name="Textbox90">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Birthday</Value>
+                <Value>Identifiant :</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox69</rd:DefaultName>
-        <Top>7.38615cm</Top>
-        <Left>8.62224cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>3.53187cm</Width>
+        <rd:DefaultName>Textbox87</rd:DefaultName>
+        <Top>8.06083cm</Top>
+        <Left>3.33785cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.42063cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -393,7 +363,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>9.4809cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -409,10 +379,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Birthday.Value</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                              </Style>
+                              <Value>=Fields!Identifiant.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -424,6 +392,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -449,10 +418,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>7.38615cm</Top>
-        <Left>14.49599cm</Left>
+        <Top>7.90208cm</Top>
+        <Left>5.93487cm</Left>
         <Height>0.75875cm</Height>
-        <Width>2.5cm</Width>
+        <Width>9.4809cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -460,30 +429,28 @@
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox73">
+      <Textbox Name="Textbox91">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Email</Value>
+                <Value>Contact :</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox69</rd:DefaultName>
-        <Top>8.89427cm</Top>
-        <Left>8.62224cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>3.53187cm</Width>
+        <rd:DefaultName>Textbox87</rd:DefaultName>
+        <Top>9.476cm</Top>
+        <Left>3.33786cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.42063cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -499,7 +466,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>9.4809cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -515,10 +482,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Email.Value</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                              </Style>
+                              <Value>=Fields!Contact.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -530,6 +495,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -555,10 +521,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>8.89427cm</Top>
-        <Left>14.49599cm</Left>
+        <Top>9.31725cm</Top>
+        <Left>5.93488cm</Left>
         <Height>0.75875cm</Height>
-        <Width>2.5cm</Width>
+        <Width>9.4809cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -566,30 +532,28 @@
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox74">
+      <Textbox Name="Textbox92">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Nom</Value>
+                <Value>Email :</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox69</rd:DefaultName>
-        <Top>10.32302cm</Top>
-        <Left>8.62224cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>3.53187cm</Width>
+        <rd:DefaultName>Textbox87</rd:DefaultName>
+        <Top>10.73313cm</Top>
+        <Left>0.31751cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.45249cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -605,7 +569,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>11.09896cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -621,10 +585,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Contact.Value</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                              </Style>
+                              <Value>=Fields!Email.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -636,6 +598,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -661,10 +624,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>10.32302cm</Top>
-        <Left>14.49599cm</Left>
+        <Top>10.57438cm</Top>
+        <Left>4.31682cm</Left>
         <Height>0.75875cm</Height>
-        <Width>2.5cm</Width>
+        <Width>11.09896cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -672,11 +635,128 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox99">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Code QR</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox99</rd:DefaultName>
+        <Top>11.8237cm</Top>
+        <Left>12.91578cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Image Name="Image8">
+        <Source>Database</Source>
+        <Value>=First(Fields!CodeQr.Value, "DataSet1")</Value>
+        <MIMEType>image/jpeg</MIMEType>
+        <Sizing>FitProportional</Sizing>
+        <Top>12.90849cm</Top>
+        <Left>12.91578cm</Left>
+        <Height>2.5cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Image Name="Image9">
+        <Source>Database</Source>
+        <Value>=First(Fields!PhotoEcole.Value, "DataSet1")</Value>
+        <MIMEType>image/jpeg</MIMEType>
+        <Sizing>FitProportional</Sizing>
+        <Top>0.28787cm</Top>
+        <Left>0.31751cm</Left>
+        <Height>1.5cm</Height>
+        <Width>1.5cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Image Name="Image10">
+        <Source>Database</Source>
+        <Value>=First(Fields!PhotoEcole.Value, "DataSet1")</Value>
+        <MIMEType>image/jpeg</MIMEType>
+        <Sizing>FitProportional</Sizing>
+        <Top>0.28787cm</Top>
+        <Left>13.91577cm</Left>
+        <Height>1.5cm</Height>
+        <Width>1.5cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Textbox Name="Textbox100">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!NomEcole.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox100</rd:DefaultName>
+        <Top>0.28787cm</Top>
+        <Left>2.43827cm</Left>
+        <Height>1.5cm</Height>
+        <Width>11.01958cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>5.42708in</Height>
+    <Height>6.11013in</Height>
     <Style />
   </Body>
-  <Width>11.07651in</Width>
+  <Width>6.09004in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -706,7 +786,11 @@
       <Fields>
         <Field Name="Birthday">
           <DataField>Birthday</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodeQr">
+          <DataField>CodeQr</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
         <Field Name="Contact">
           <DataField>Contact</DataField>
@@ -723,6 +807,18 @@
         <Field Name="Nom">
           <DataField>Nom</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomEcole">
+          <DataField>NomEcole</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Photo">
+          <DataField>Photo</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="PhotoEcole">
+          <DataField>PhotoEcole</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
         <Field Name="Prenom">
           <DataField>Prenom</DataField>
